@@ -8,8 +8,11 @@ public interface ICustomerService
 
     public IEnumerable<Customer> GetAllCustomers();
 
-    public ResultResponse UpdateCustomer(string id);
+    public Customer? GetOneCustomer(string email);
 
-    public ResultResponse DeleteCustomer(string id);
+    public ResultResponse UpdateCustomer(string email, Customer updatedCustomer);
 
+    public ResultResponse DeleteCustomer(string email);
+
+    public void GetCustomerFromFile();
 }

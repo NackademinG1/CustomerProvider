@@ -2,7 +2,7 @@
 
 namespace CustomerProvider.Factories;
 
-public class CustomerFactory
+public static class CustomerFactory
 {
     public static Customer Create(CustomerRequest customerRequest)
     {
