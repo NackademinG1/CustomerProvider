@@ -27,9 +27,15 @@ public class CustomerService_Tests
 
     #region Delete
     [Fact]
-    public void DeleteCustomer_ShouldDeleteCustomerFromDatabas()
+    public void DeleteCustomer_ShouldDeleteCustomerFromDatabasAndReturnSucceeded()
     {
+        var email = C
+        CustomerService customerService = new CustomerService();
 
+        var customerList = customerService.GetAllCustomers();
+        var response = customerService.DeleteCustomer(email);
+
+        Assert.True(response.Succeeded);
     }
 
     #endregion

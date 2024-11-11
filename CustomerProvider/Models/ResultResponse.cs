@@ -1,6 +1,10 @@
 ﻿namespace CustomerProvider.Models;
 
-public class ResultResponse
+public class ResultResponse : BaseResultResponse
+{ 
+}
+
+public abstract class BaseResultResponse
 {
     public bool Succeeded { get; set; }
 

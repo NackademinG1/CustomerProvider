@@ -2,7 +2,7 @@
 
 namespace CustomerProvider.Models;
 
-public class Customer
+public class Customer : CustomerBacklogg
 {
     [Required(ErrorMessage = "Du måste fylla i ditt förnamn")]
     public string FirstName { get; set; } = null!;

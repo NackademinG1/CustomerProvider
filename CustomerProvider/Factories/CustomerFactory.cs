@@ -4,16 +4,18 @@ namespace CustomerProvider.Factories;
 
 public static class CustomerFactory
 {
-    public static Customer Create(CustomerRequest customerRequest)
+    public static CustomerBacklogg Create(Customer customerInfo)
     {
         try
         {
             var customer = new Customer()
             {
-                FirstName = customerRequest.FirstName,
-                LastName = customerRequest.LastName,
-                Email = customerRequest.Email,
+                FirstName = customerInfo.FirstName,
+                LastName = customerInfo.LastName,
+                Email = customerInfo.Email,
+                Id = customerInfo.Id + Guid.NewGuid().ToString()
             };
+
             return customer;
         }
         catch
