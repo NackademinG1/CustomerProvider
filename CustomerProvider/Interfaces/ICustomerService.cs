@@ -4,15 +4,15 @@ namespace CustomerProvider.Interfaces;
 
 public interface ICustomerService
 {
-    public ResultResponse CreateCustomer(Customer customer);
+    public BaseResultResponse CreateCustomer(Customer customer);
 
     public IEnumerable<Customer> GetAllCustomers();
 
     public Customer? GetOneCustomer(string email);
 
-    public ResultResponse UpdateCustomer(string email, Customer updatedCustomer);
+    public BaseResultResponse UpdateCustomer(string email, Customer updatedCustomer);
 
-    public ResultResponse DeleteCustomer(string email);
+    public BaseResultResponse DeleteCustomer(string email);
 
     public void GetCustomerFromFile();
 }

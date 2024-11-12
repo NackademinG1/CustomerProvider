@@ -9,6 +9,7 @@ public static class OrderFactory
     {
         var productOrder = new Order()
         {
+            TrackingCode = Guid.NewGuid().ToString(),
             ProductName = order.ProductName,
             ProductNumber = order.ProductNumber,
             TotalPrice = order.TotalPrice,
@@ -16,6 +17,6 @@ public static class OrderFactory
             Size = order.Size
         };
 
-         return productOrder;
+        return productOrder;
     }
 }

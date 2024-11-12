@@ -2,6 +2,8 @@
 
 public class Order
 {
+    public string TrackingCode { get; set; } = null!;
+
     public string ProductName { get; set; } = null!;
 
     public string ProductNumber { get; set; } = null!;

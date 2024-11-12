@@ -11,7 +11,7 @@ public class CustomerService : ICustomerService
     private readonly IFileService _fileService = new FileService(_filePath);
     private List<Customer> _customerList = new List<Customer>();
 
-    public ResultResponse CreateCustomer(Customer customer)
+    public BaseResultResponse CreateCustomer(Customer customer)
     {
         try
         {
@@ -64,7 +64,7 @@ public class CustomerService : ICustomerService
         return null!;
     }
 
-    public ResultResponse UpdateCustomer(string email, Customer updatedCustomer)
+    public BaseResultResponse UpdateCustomer(string email, Customer updatedCustomer)
     {
         try
         {
@@ -96,7 +96,7 @@ public class CustomerService : ICustomerService
         }
     }
 
-    public ResultResponse DeleteCustomer(string email)
+    public BaseResultResponse DeleteCustomer(string email)
     {
         try
         {
